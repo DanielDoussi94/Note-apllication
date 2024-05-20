@@ -14,12 +14,12 @@ app.use(express.static('public'))
 
 
 //Template engine
-app.set('view engine', 'ejs');
 app.use(expressLayouts);
 app.set('layout', 'layouts/main')
+app.set('view engine', 'ejs');
+
 
 app.get('/', function(req, res){
-
     const locals = {
         title: 'Node js Notes',
         description: 'Free node js Notes App'
@@ -27,8 +27,14 @@ app.get('/', function(req, res){
     res.render('index', locals)
 })
 
+
 // ROUTERS
-app.use('/', require('./server/router/router'))
+app.use('/', require('./server/router/Mainrouter'))
+app.use('/', require('./server/router/dashboardR'))
+
+app.get('*', function(req, res){
+    res.status(404).render('404')
+})
 
 
 app.listen(port, ()=>{

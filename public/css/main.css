@@ -28,3 +28,28 @@ body{
     --bs-pagination-active-bg:var(--bs-primary-rgb);
     --bs-pagination-active-border-color: var(--bs-primary-rgb)
 }
+/* HOME */
+/* @media(min-width : 1200px) {
+    .home {
+        background: 
+        url('../img/human.png') left bottom no-repeat,
+        url('../img/human2.png') right bottom no-repeat,
+        url('../img/human.png') left top repeat,
+        var(--background-color);
+    }
+}
+
+.home-title::before {
+    content: url('../img/human0.png');
+    position: absolute;
+    left: -50px;
+    top: -30px;
+}
+
+.home-title::after {
+    content: url('../img/human0.png');
+    position: absolute;
+    right: -50px;
+    top: -30px;
+} */
+
