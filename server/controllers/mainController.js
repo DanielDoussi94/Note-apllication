@@ -1,3 +1,4 @@
+
 // Gestion de la homePage
 exports.homepage = async (req, res) =>{
     const locals = {
