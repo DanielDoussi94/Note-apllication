@@ -11,14 +11,17 @@ require('dotenv').config();
 //SESSION
 app.use(session(
     {
-      store: MongoStore.create({
-        mongoUrl: 'mongodb+srv://Dan:DanDan@cluster0.vqa8wp1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-      }),
       secret: 'keyboard cat',
       resave: false,
       saveUninitialized: true,
+      store: MongoStore.create({
+        mongoUrl: 'mongodb+srv://Dan:DanDan@cluster0.vqa8wp1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+      }),
+      // cookie: {maxAge: new Date(Date.now() + (3600000))}
     }
-  ));
+  ))
+
+
 
 app.use(express.urlencoded({extended: true})) //encodage des données envoyé par formulaire
 app.use(express.json())
